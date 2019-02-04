@@ -1,0 +1,48 @@
+{
+  "clinics":[
+    {
+      "id": 1,
+      "nome": "Clinica 1",
+      "razao_social": "Clinica 1 lts",
+      "descricao": "Clinica 1 de teste.",
+      "img": "https://tvc.org/wp-content/uploads/logo.svg",
+      "endereco": "Rua Amarau, 123 São Paulo/SP",
+      "telefone": "(11) 4567-7654",
+      "website": "www.clinica.com.br",
+      "rate": 2.4
+    },
+    {
+      "id": 2,
+      "nome": "Clinica 2",
+      "razao_social": "Clinica 2 lts",
+      "descricao": "Clinica 2 de teste.",
+      "img": "https://tvc.org/wp-content/uploads/logo.svg",
+      "endereco": "Rua Amarau, 122 São Paulo/SP",
+      "telefone": "(11) 4567-7654",
+      "website": "www.clinica.com.br",
+      "rate": 2.5
+    },
+    {
+      "id": 3,
+      "nome": "Clinica 3",
+      "razao_social": "Clinica 3 lts",
+      "descricao": "Clinica 3 de teste.",
+      "img": "https://tvc.org/wp-content/uploads/logo.svg",
+      "endereco": "Rua Amarau, 125 São Paulo/SP",
+      "telefone": "(11) 4567-7654",
+      "website": "www.clinica.com.br",
+      "rate": 5
+    },
+    {
+      "id": 4,
+      "nome": "Clinica 4",
+      "razao_social": "Clinica 4 lts",
+      "descricao": "Clinica 4 de teste.",
+      "img": "https://tvc.org/wp-content/uploads/logo.svg",
+      "endereco": "Rua Amarau, 1 São Paulo/SP",
+      "telefone": "(11) 4567-7654",
+      "website": "www.clinica.com.br",
+      "rate": 2
+    }
+  ]
+}
