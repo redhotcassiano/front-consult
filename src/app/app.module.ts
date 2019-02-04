@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { ClinicComponent } from './clinic/clinic.component';
 import { ClinicInfoComponent } from './clinic/clinic-info/clinic-info.component';
 import { HttpModule } from '@angular/http';
+import { ClinicDetailComponent } from './clinic/clinic-detail/clinic-detail.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { HttpModule } from '@angular/http';
     HomeComponent,
     AboutComponent,
     ClinicComponent,
-    ClinicInfoComponent
+    ClinicInfoComponent,
+    ClinicDetailComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(ROUTES),
-    HttpModule
+    HttpModule,
+    FontAwesomeModule
   ],
   providers: [ClinicsService],
   bootstrap: [AppComponent]
