@@ -20,6 +20,13 @@ export class ClinicsService {
       map(response => response.json()),
       catchError(ErrorHandler.HandleError)
     )
-
   }
+
+  clinicById(id:string): Observable<Clinic> {
+    return this.http.get(`${API}/clinics/${id}`).pipe(
+      map(response => response.json()),
+      catchError(ErrorHandler.HandleError)
+    )
+  }
+
 }

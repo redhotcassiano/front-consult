@@ -1,18 +1,57 @@
-<div class="text-center">
-  <img src="https://tvc.org/wp-content/uploads/logo.svg" class="rounded img-logo" alt="">
+<div class="text-center" *ngIf="clinic">
+  <img [src]="clinic?.img" class="rounded img-logo" [alt]="clinic?.nome">
 </div>
-<div class="row">
+<div class="row" *ngIf="clinic">
   <div class="col-md-12">
     <div class="card">
       <div class="card-body">
+        <div class="clinic-name">
+          {{clinic?.nome}}
+        </div>
         <div class="description">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste ex laudantium error ea reiciendis expedita velit veritatis ratione deserunt pariatur, temporibus quibusdam molestiae iure repellat, ipsam similique repellendus, in commodi?
+          {{clinic?.descricao}}
         </div>
         <div class="endereco">
-            <fa-icon [icon]="faHotel" class="hotel"></fa-icon>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat iure, earum ipsam sed quidem quasi iste soluta, laborum architecto labore impedit, sapiente dignissimos neque quae aperiam nostrum consequuntur dolores. Nihil.
+          <fa-icon [icon]="faHotel" class="hotel"></fa-icon>
+          {{clinic?.endereco}}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<div class="row services-row" *ngIf="clinic">
+    <div class="col-md-4" *ngFor="let service of clinic.services">
+      <div class="card">
+        <div class="card-body">
+          <div class="clinic-name">
+            {{service?.name}}
+          </div>
+          <div class="description">
+            {{service?.price | currency:'BRL':true }}
+          </div>
+          <div class="action-service">
+            <button (click)="open(content)" class="btn btn-primary">
+              Agendar Consulta
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #content let-modal>
+      <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Agendar Consulta</h4>
+        <button class="close" aria-label="Close" (click)="modal?.dismiss('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <app-agendar-consulta [people]="people" (outputAgenda)="reciverFeedback($event)"></app-agendar-consulta>
+      </div>
+      <div class="modal-footer">
+        
+      </div>
+  </ng-template>
+

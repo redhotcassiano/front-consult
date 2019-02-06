@@ -9,7 +9,24 @@
       "endereco": "Rua Amarau, 123 São Paulo/SP",
       "telefone": "(11) 4567-7654",
       "website": "www.clinica.com.br",
-      "rate": 2.4
+      "rate": 2.4,
+      "services":[
+        {
+          "id":1,
+          "name":"Lente de Contato Dental",
+          "price": 350
+        },
+        {
+          "id":2,
+          "name":"Clareamento Dental",
+          "price": 150
+        },
+        {
+          "id":3,
+          "name":"Restaurações Estéticas",
+          "price": 200
+        }
+      ]
     },
     {
       "id": 2,
@@ -20,7 +37,24 @@
       "endereco": "Rua Amarau, 122 São Paulo/SP",
       "telefone": "(11) 4567-7654",
       "website": "www.clinica.com.br",
-      "rate": 2.5
+      "rate": 2.5,
+      "services":[
+        {
+          "id":1,
+          "name":"Lente de Contato Dental",
+          "price": 350
+        },
+        {
+          "id":2,
+          "name":"Clareamento Dental",
+          "price": 150
+        },
+        {
+          "id":3,
+          "name":"Restaurações Estéticas",
+          "price": 200
+        }
+      ]
     },
     {
       "id": 3,
@@ -31,7 +65,24 @@
       "endereco": "Rua Amarau, 125 São Paulo/SP",
       "telefone": "(11) 4567-7654",
       "website": "www.clinica.com.br",
-      "rate": 5
+      "rate": 5,
+      "services":[
+        {
+          "id":1,
+          "name":"Lente de Contato Dental",
+          "price": 350
+        },
+        {
+          "id":2,
+          "name":"Clareamento Dental",
+          "price": 150
+        },
+        {
+          "id":3,
+          "name":"Restaurações Estéticas",
+          "price": 200
+        }
+      ]
     },
     {
       "id": 4,
@@ -42,7 +93,25 @@
       "endereco": "Rua Amarau, 1 São Paulo/SP",
       "telefone": "(11) 4567-7654",
       "website": "www.clinica.com.br",
-      "rate": 2
+      "rate": 2,
+      "services":[
+        {
+          "id":1,
+          "name":"Lente de Contato Dental",
+          "price": 350
+        },
+        {
+          "id":2,
+          "name":"Clareamento Dental",
+          "price": 150
+        },
+        {
+          "id":3,
+          "name":"Restaurações Estéticas",
+          "price": 200
+        }
+      ]
     }
   ]
+
 }

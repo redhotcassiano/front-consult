@@ -1,0 +1,176 @@
+<div class="title-page">
+  <h1>Seu Cadastro</h1>
+</div>
+<div class="center-container">
+    {{ registerForm.status }}
+    <form [formGroup]="registerForm" novalidate>
+      <div class="row row-input ">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            [class.has-success]="!f.name.errors && (f.name.dirty || f.name.touched)"
+            [class.has-error]="f.name.errors && (f.name.dirty || f.name.touched)"
+            placeholder="Nome"
+            name="name"
+            formControlName="name"
+            required
+            minlength="3"
+           >
+            <span class="error" *ngIf="!f.name.valid && (f.name.dirty || f.name.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            [class.has-success]="f.lastname.valid && (f.lastname.dirty || f.lastname.touched)"
+            [class.has-error]="!f.lastname.valid && (f.lastname.dirty || f.lastname.touched)"
+            placeholder="Sobrenome"
+            name="lastname"
+            minlength="3"
+            formControlName="lastname"
+            required>
+            <span class="error" *ngIf="!f.lastname.valid && (f.lastname.dirty || f.lastname.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+      </div>
+      <div class="row row-input">
+        <div class="col">
+          <input
+            type="email"
+            class="form-control"
+            [class.has-success]="f.email.valid && (f.email.dirty || f.email.touched)"
+            [class.has-error]="!f.email.valid && (f.email.dirty || f.email.touched)"
+            placeholder="E-mail"
+            name="email"
+            minlength="5"
+            formControlName="email"
+            required>
+            <span class="error" *ngIf="!f.email.valid && (f.email.dirty || f.email.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            [class.has-success]="f.fone.valid && (f.fone.dirty || f.fone.touched)"
+            [class.has-error]="!f.fone.valid && (f.fone.dirty || f.fone.touched)"
+            placeholder="Telefone"
+            name="fone"
+            minlength="6"
+            formControlName="fone"
+            required>
+            <span class="error" *ngIf="!f.fone.valid && (f.fone.dirty || f.fone.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+      </div>
+      <div class="row row-input">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            [class.has-success]="f.address.valid && (f.address.dirty || f.address.touched)"
+            [class.has-error]="!f.address.valid && (f.address.dirty || f.address.touched)"
+            placeholder="Endereço"
+            name="address"
+            minlength="5"
+            formControlName="address"
+            required>
+            <span class="error" *ngIf="!f.address.valid && (f.address.dirty || f.address.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Cidade"
+            [class.has-success]="f.city.valid && (f.city.dirty || f.city.touched)"
+            [class.has-error]="!f.city.valid && (f.city.dirty || f.city.touched)"
+            name="city"
+            minlength="3"
+            formControlName="city"
+            required>
+            <span class="error" *ngIf="!f.city.valid && (f.city.dirty || f.city.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+      </div>
+      <div class="row row-input ">
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            [class.has-success]="f.country.valid && (f.country.dirty || f.country.touched)"
+            [class.has-error]="!f.country.valid && (f.country.dirty || f.country.touched)"
+            placeholder="Estado"
+            name="country"
+            formControlName="country"
+            required
+            minlength="2">
+            <span class="error" *ngIf="!f.country.valid && (f.country.dirty || f.country.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+        <div class="col">
+          <input
+            type="text"
+            class="form-control"
+            [class.has-success]="f.zip.valid && (f.zip.dirty || f.zip.touched)"
+            [class.has-error]="!f.zip.valid && (f.zip.dirty || f.zip.touched)"
+            placeholder="CEP"
+            name="zip"
+            minlength="4"
+            formControlName="zip"
+            required>
+            <span class="error" *ngIf="!f.zip.valid && (f.zip.dirty || f.zip.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+      </div>
+      <div class="row row-input ">
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            [class.has-success]="f.password.valid && (f.password.dirty || f.password.touched)"
+            [class.has-error]="!f.password.valid && (f.password.dirty || f.password.touched)"
+            placeholder="Senha"
+            name="password"
+            minlength="6"
+            formControlName="password"
+            required>
+            <span class="error" *ngIf="!f.password.valid && (f.password.dirty || f.password.touched)">
+              *Campo Obrigatorio
+            </span>
+        </div>
+        <div class="col">
+          <input
+            type="password"
+            class="form-control"
+            [class.has-success]="f.resPassword.valid && (f.resPassword.dirty || f.resPassword.touched)"
+            [class.has-error]="!f.resPassword.valid && (f.resPassword.dirty || f.resPassword.touched)"
+            placeholder="Confirme a Senha"
+            name="resPassword"
+            minlength="6"
+            formControlName="resPassword"
+            required>
+            <span class="error" *ngIf="!f.resPassword.valid && (f.resPassword.dirty || f.resPassword.touched)">
+              *Campo Obrigatorio
+            </span>
+            <span class="error" *ngIf="registerForm.hasError['passwordNotMatch']">
+              Erro ao confirmar a senha.
+            </span>
+        </div>
+      </div>
+      <div class="btn-register">
+        <button class="btn btn-block btn-info">Cadastrar</button>
+      </div>
+    </form>
+</div>
+

@@ -4,7 +4,7 @@
 <div style="margin-top: 25px;"></div>
 <div class="row">
   <div *ngFor="let itemClinic of clinics" class="col-sm">
-    <app-clinic-info [clinic]="itemClinic" ></app-clinic-info>
+    <app-clinic-info [clinic]="itemClinic" *ngIf="itemClinic"></app-clinic-info>
   </div>
 </div>
 <div style="margin-top: 25px;"></div>
