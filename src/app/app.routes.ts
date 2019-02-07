@@ -7,7 +7,7 @@ import { RegisterComponent } from './register/register.component';
 
 
 export const ROUTES: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', loadChildren: './home/home.module#HomeModule'},
   {path: 'sobre', loadChildren: './about/about.module#AboutModule'},
   {path:'clinicas', component: ClinicComponent},
   {path:'detalhes/:id', component: ClinicDetailComponent},

@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ClinicComponent } from './clinic/clinic.component';
 import { ClinicInfoComponent } from './clinic/clinic-info/clinic-info.component';
@@ -23,7 +22,6 @@ import { InputComponent } from './shared/input/input.component';
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent,
     ClinicComponent,
     ClinicInfoComponent,
     ClinicDetailComponent,
