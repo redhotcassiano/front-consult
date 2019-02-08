@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ClinicComponent } from './clinic/clinic.component';
 import { ClinicInfoComponent } from './clinic/clinic-info/clinic-info.component';
 import { HttpModule } from '@angular/http';
@@ -18,6 +18,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { InputComponent } from './shared/input/input.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NotFoundComponent } from './not-found/not-found.component'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,17 +31,19 @@ import { InputComponent } from './shared/input/input.component';
     ClinicDetailComponent,
     AgendarConsultaComponent,
     RegisterComponent,
-    InputComponent
+    InputComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(ROUTES),
+    RouterModule.forRoot(ROUTES, {preloadingStrategy: PreloadAllModules}),
     HttpModule,
     FontAwesomeModule,
     NgbModule,
     NgSelectModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [ClinicsService],
   bootstrap: [AppComponent]
